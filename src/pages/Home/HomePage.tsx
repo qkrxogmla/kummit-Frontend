@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react"
 import BottomBar from "../../components/BottomBar"
 import UpperNavBar from "../../components/UpperNavBar"
@@ -62,4 +63,5 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+
+export default HomePage;
