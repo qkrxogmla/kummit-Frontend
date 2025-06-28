@@ -4,7 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import MusicSearchBar from "../../components/MusicSearchBar";
 
 const CreateBandPage2 = () => {
-  const [music, setMusic] = useState<string | null>(null);
+  const [music, _setMusic] = useState<string | null>(null);
   const location = useLocation();
   const { selectedEmotion } = location.state || {};
   const navigate = useNavigate();
