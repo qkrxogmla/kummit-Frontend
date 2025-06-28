@@ -12,7 +12,11 @@ const MusicSearchBar = () => {
   };
 
   const handleSearch = async () => {
-    const res = await axios.post("/api/music/search", { query: searchTerm });
+    const res = await axios.get(
+      `http://144.24.81.195:8080/api/music/search?query=${encodeURIComponent(
+        searchTerm
+      )}`
+    );
     setMusics(res.data.musics);
   };
 

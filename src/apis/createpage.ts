@@ -10,5 +10,6 @@ export const getTopEmotionBands = async (searchMusic: SearchMusic) => {
       searchMusic.query
     )}`
   );
+
   return res.data;
 };
