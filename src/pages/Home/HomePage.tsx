@@ -1,9 +1,12 @@
-const HomePage = () =>{
+import BottomBar from "../../components/BottomBar"
+
+const HomePage = () => {
 
 
-    return(
+    return (
         <div>
             home
+            <BottomBar />
         </div>
     )
 }

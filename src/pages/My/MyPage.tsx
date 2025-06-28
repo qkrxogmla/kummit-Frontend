@@ -1,9 +1,12 @@
-const MyPage = () =>{
+import BottomBar from "../../components/BottomBar"
+
+const MyPage = () => {
 
 
-    return(
+    return (
         <div>
             MyPage
+            <BottomBar />
         </div>
     )
 }
