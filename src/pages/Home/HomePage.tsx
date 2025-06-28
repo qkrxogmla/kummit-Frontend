@@ -15,10 +15,10 @@ const HomePage = () => {
     }, [])
 
     return (
-        <div>
+        // <div>
+        <div className="max-w-[412px] h-[917px] mx-auto overflow-y-scroll">
             <UpperNavBar isCanBack={false} text="Emotion Band" />
             <CreateBandButton />
-
             <div>
                 <div className="flex justify-between">
                     <div className="justify-start text-black text-xl font-normal font-['Inter'] leading-normal">지금 인기있는 감정 밴드</div>
@@ -31,7 +31,6 @@ const HomePage = () => {
                     // {topBands?.popularBands ?
                     <>
                         {topBands.popularBands.map((bandUnit: bands) => {
-                            // <EmotionBand bands={bandUnit} />
                             return <EmotionBand key={bandUnit.id} {...bandUnit} />
                         })}
                     </>
@@ -58,7 +57,8 @@ const HomePage = () => {
                     <>추후 빈 카드 임시 출력하도록 </>}
             </div>
             <BottomBar />
-        </div>
+        </div >
+
     )
 }
 

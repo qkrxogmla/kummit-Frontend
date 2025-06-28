@@ -16,7 +16,8 @@ const BottomBar = () => {
     }, [location.pathname]);
 
     return (
-        <div className="flex justify-between">
+        <div className="flex justify-between
+        max-w-[372px] h-10 pl-5 pr-5">
 
             <BottomBarItem
                 imageOnSrc="/icons/Music-on.svg"
