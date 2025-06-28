@@ -1,9 +1,11 @@
 import BottomBar from "../../components/BottomBar"
+import UpperNavBar from "../../components/UpperNavBar"
 
 const HomePage = () => {
 
     return (
         <div>
+            <UpperNavBar isCanBack={false} text="Emotion Band" OptionImage='/icons/logo.svg' />
             <div>
                 + 감정 밴드 만들기
             </div>

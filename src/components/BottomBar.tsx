@@ -1,27 +1,38 @@
-import { useNavigate } from "react-router-dom"
+import { useLocation } from "react-router-dom"
+import BottomBarItem from "./BottomBarItem"
+import { useEffect, useState } from "react";
 
 const BottomBar = () => {
-    const navigate = useNavigate()
-    const handleClickHome = () => {
-        navigate('/home')
-    }
-    const handleClickCreate = () => {
-        navigate('/create')
-    }
-    const handleClickMy = () => {
-        navigate('/my')
-    }
+
+    const [selectedMenu, setSelectedMenu] = useState('home')
+    const location = useLocation();
+
+    useEffect(() => {
+        const selected = location.pathname;
+        if (selected === '/home' || selected === '/create' || selected === '/my') {
+            setSelectedMenu(selected);
+        }
+
+    }, [location.pathname]);
+
     return (
         <div className="flex justify-between">
-            <div onClick={handleClickHome}>
-                홈
-            </div>
-            <div onClick={handleClickCreate}>
-                +
-            </div>
-            <div onClick={handleClickMy}>
-                My
-            </div>
+
+            <BottomBarItem
+                imageOnSrc="/icons/Music-on.svg"
+                imageOffSrc="/icons/Music-off.svg"
+                isSelected={selectedMenu === '/home'} text="home" />
+
+            <BottomBarItem
+                imageOnSrc="/icons/add-on.svg"
+                imageOffSrc="/icons/add-off.svg"
+                isSelected={selectedMenu === '/create'} text="create" />
+
+            <BottomBarItem
+                imageOnSrc="/icons/person-on.svg"
+                imageOffSrc="/icons/person-off.svg"
+                isSelected={selectedMenu === '/my'} text="my" />
+
         </div>
     )
 }
