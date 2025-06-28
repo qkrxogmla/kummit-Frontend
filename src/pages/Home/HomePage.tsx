@@ -1,9 +1,13 @@
-import BottomBar from "../../components/BottomBar"
+import BottomBar from "../../components/BottomBar";
+import MyPage from "../My/MyPage";
 import UpperNavBar from "../../components/UpperNavBar"
 
 const HomePage = () => {
-
-    return (
+  return (
+    <div>
+      <div>+ 감정 밴드 만들기</div>
+      <div>
+        인기 있는 감정 밴드
         <div>
             <UpperNavBar isCanBack={false} text="Emotion Band" OptionImage='/icons/logo.svg' />
             <div>
@@ -35,7 +39,8 @@ const HomePage = () => {
             </div>
             <BottomBar />
         </div>
-    )
-}
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;
